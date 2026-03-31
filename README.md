@@ -9,3 +9,4 @@ cd hyprland-dotfiles
 chmod +x install.sh
 ./install.sh
 ```
+![Preview](screenshot.png)
