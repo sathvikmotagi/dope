@@ -1,0 +1,26 @@
+@import "Downloads/config.rasi"
+
+/* --- Emoji-specific overrides --- */
+
+configuration {
+    show-icons: false;
+}
+
+listview {
+    columns: 10;        /* grid width */
+    lines: 6;           /* grid height */
+    spacing: 8px;
+    layout: vertical;
+}
+
+element {
+    padding: 8px;
+    border-radius: 8px;
+    children: [ element-text ];
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    font: "Noto Color Emoji 26";
+}

@@ -1,0 +1,125 @@
+@import "/home/motagi/.cache/wal/colors-waybar.css";
+/* =====================
+   Global
+===================== */
+* {
+  border: none;
+  min-height: 0;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 11px;
+}
+/* =====================
+   Floating Waybar (darker)
+===================== */
+window#waybar {
+  background: @background;
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+/* =====================
+   Workspaces (10 pills, no numbers)
+===================== */
+#workspaces button {
+  padding: 0 5px;
+  color: @color1;
+  margin: 4px 0 4px 6px;
+  transition: color 200ms ease-in-out;
+  font-size: 20px;
+  font-family: SF Compact Display Bold;
+}
+#workspaces button.selected {
+  color: @color8;
+}
+#workspaces button.active {
+  color: @color7;
+}
+#workspaces button.urgent {
+  color: @color3; /* Fixed typo: was @coloe3 */
+}
+/* =====================
+   Compact Modules
+===================== */
+#clock,
+#battery,
+#network,
+#wireplumber,
+#bluetooth,
+#tray {
+  padding: 3px 6px;
+  margin: 0 3px;
+  background-color: @color1;
+  color: @foreground;
+}
+#network {
+  background-color: @color1;
+  color: @foreground;
+}
+#wireplumber {
+  background-color: @color1;
+  color: @foreground;
+}
+/* =====================
+   Battery states
+===================== */
+#battery.charging {
+  background-color: @color1;
+  color: @foreground;
+}
+#battery.warning,
+#battery.critical {
+  background-color: rgba(190, 80, 80, 0.9);
+  color: @foreground;
+}
+#clock {
+  background-color: @color1;
+  color: @foreground;
+}
+/* =====================
+   Tray
+===================== */
+#tray > .needs-attention {
+  background-color: @color1;
+}
+/* =====================
+   Tooltips
+===================== */
+tooltip {
+  background: @background;
+  border-radius: 8px;
+  padding: 3px;
+}
+tooltip label {
+  color: @color1;
+}
+#window {
+  padding: 3px 6px;
+  margin: 0 3px;
+  background-color: @color1;
+  color: @foreground;
+}
+#custom-arch {
+  padding: 3px 6px;
+  margin: 0 3px;
+  color: @foreground;
+}
+/* =====================
+   Taskbar
+===================== */
+#taskbar {
+  padding: 3px 6px;
+  margin: 0 3px;
+  background-color: @color1;
+  color: @foreground;
+}
+#taskbar button {
+  all: unset;
+  padding: 0 4px;
+  margin: 0 2px;
+  color: @foreground;
+}
+#taskbar button.active {
+  color: @foreground;
+}
+#taskbar button:hover {
+  color: @foreground;
+}

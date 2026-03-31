@@ -1,0 +1,85 @@
+configuration {
+    modes: "window,run,emoji,ssh,drun";
+    sorting-method: "normal";
+    show-icons:true;
+    matching: "regex";
+    drun-match-fields: "name";
+    display-run: "Menu:";
+    display-ssh: "SSH:";
+    display-drun: "Apps:";
+    display-window: "Windows:";
+}
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    font: "JetBrains Mono Nerd Font Bold 12, Noto Color Emoji 11";
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0px;
+    padding:    0px;
+    spacing:    0px;
+}
+
+window {
+    location:       center;
+    width:          30%;
+    border:         2px;
+    border-radius:  12px;
+//    border-color:   @color1;
+    background-color: @background;
+}
+
+mainbox {
+    border:  0;
+    padding: 10px;
+}
+
+inputbar {
+    children:   [prompt,entry];
+    border:     0px;
+    border-radius: 8px;
+    padding:    8px;
+    background-color: @background;
+}
+
+prompt {
+    padding:        6px;
+    background-color: @background;
+    text-color:     @foreground;
+}
+
+entry {
+    padding:        6px;
+    background-color: @background;
+    text-color:     @foreground;
+}
+
+listview {
+    border:     0px;
+    padding:    6px 0px 0px;
+    spacing:    6px;
+    scrollbar:  false;
+}
+element {
+    orientation: horizontal;
+    border:         0px;
+    border-radius:  8px;
+    padding:        8px;
+    spacing:        12px;   /* <-- this creates space between icon and text */
+    background-color: @background;
+    text-color:     @foreground;
+}
+
+element-icon {
+    size: 20px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"

@@ -1,0 +1,116 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 10,
+    "weidth": 0,
+    "margin-top": 5,
+    "margin-bottom": 0,
+    "margin-left": 5,
+    "margin-right": 5,
+
+
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        
+        "wlr/taskbar",
+        "tray",
+        
+        "wireplumber",
+        "bluetooth",
+        "battery",
+        "memory"
+    ],
+
+
+    
+    "wlr/taskbar": {
+  "format": "{icon}",
+  "icon-size": 14,
+
+  "grouped": true,
+  "sort-by-app-id": true,
+
+  "on-click": "activate",
+  "on-click-middle": "close",
+
+  "ignore-list": ["waybar"]
+},
+
+"hyprland/workspaces": {
+       "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent-workspaces": {
+    "*": 4
+}
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "<span foreground='#d0dfe4'>󰍛 {}% </span>",
+        "max-length": 10
+    },
+
+    "tray": {
+        "spacing": 6,
+        "icon-size": 15
+    },
+
+    "clock": {
+        "tooltip-format": "{calendar}",
+        "format-alt": "  {:%a, %d %b %Y}",
+        "format": "  {:%I:%M %p}"
+    },
+
+    
+"wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+
+    "format-icons": {
+        "default": ["", " ", " "]
+    },
+
+    "scroll-step": 5,
+    "tooltip": false
+},
+    "custom/logo": {
+        "format": "<span foreground='#d0dfe4'>    </span>",
+        "tooltip": false
+    },
+"battery": {
+    "format": "{icon} {capacity}%",
+
+    "format-charging": " {capacity}%",
+    "format-discharging": "{icon} {capacity}%",
+    "format-full": " Full",
+
+    "format-icons": {
+        "charging": [
+            "󰢜","󰂆","󰂇","󰂈","󰢝",
+            "󰂉","󰢞","󰂊","󰂋","󰂅"
+        ],
+        "default": [
+            "󰁺","󰁻","󰁼","󰁽","󰁾",
+            "󰁿","󰂀","󰂁","󰂂","󰁹"
+        ]
+    },
+
+    "states": {
+        "warning": 20,
+        "critical": 10
+    },
+
+    "interval": 40,
+    "tooltip": false
+}
+}
+
