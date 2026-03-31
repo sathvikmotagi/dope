@@ -1,0 +1,2 @@
+# dope
+Hyprland Dotfiles
