@@ -4,8 +4,8 @@ Hyprland Dotfiles
 INSTALLATION 
 run this command line in your terminal 
 ```bash
-git clone https://github.com/user/hyprland-dotfiles
-cd hyprland-dotfiles
+git clone https://github.com/sathvikmotagi/dope.git
+cd dope
 chmod +x install.sh
 ./install.sh
 ```
